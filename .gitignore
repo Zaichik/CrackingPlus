@@ -56,3 +56,4 @@ ipch/
 *.pidb
 *.log
 *.scc
+TestResults/

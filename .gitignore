@@ -57,3 +57,4 @@ ipch/
 *.log
 *.scc
 TestResults/
+~*

@@ -6,6 +6,53 @@ build/
 [Bb]in/
 [Oo]bj/
 
+# User-specific files
+*.suo
+*.user
+
+# NuGet Packages Directory
+package/
+packages/
+
+# Folder config file
+Desktop.ini
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
 # Misc
 *.bak
 *.orig
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.log
+*.scc

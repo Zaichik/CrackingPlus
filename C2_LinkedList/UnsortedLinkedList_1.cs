@@ -8,42 +8,42 @@ namespace C2_LinkedList
 {
     class UnsortedLinkedList_1<T>
     {
-        public LinkedList<T> RemoveDuplicatesUsingHashSet(LinkedListNode<T> node)
-        {
-            HashSet<T> nodeSet = new HashSet<T>();
-            LinkedListNode<T> previous = null;
+        //public LinkedList<T> RemoveDuplicatesUsingHashSet(LinkedListNode<T> node)
+        //{
+        //    HashSet<T> nodeSet = new HashSet<T>();
+        //    LinkedListNode<T> previous = null;
 
-            while (node!= null)
-            {
-                if (nodeSet.Contains(node.Value))
-                {
-                    previous.Next = node.Next;
-                }
-                else
-                {
-                    nodeSet.Add(node.Value);
-                    previous = node;
-                }
-                node = node.Next;
-            }
-            long [] n = new long[5];
+        //    while (node!= null)
+        //    {
+        //        if (nodeSet.Contains(node.Value))
+        //        {
+        //            previous.Next = node.Next;
+        //        }
+        //        else
+        //        {
+        //            nodeSet.Add(node.Value);
+        //            previous = node;
+        //        }
+        //        node = node.Next;
+        //    }
+        //    long [] n = new long[5];
             
             
 
-            return new LinkedList<T>(unsortedSet);
-        }
+        //    return new LinkedList<T>(unsortedSet);
+        //}
 
-        public LinkedList<T> RemoveDuplicates(LinkedListNode<T> node)
-        {
-            var current = node;
+        //public LinkedList<T> RemoveDuplicates(LinkedListNode<T> node)
+        //{
+        //    var current = node;
 
-            while (current.Next != null)
-            {
-                while (node.Next != null)
+        //    while (current.Next != null)
+        //    {
+        //        while (node.Next != null)
 
-            }
-            return new LinkedList<T>(unsortedWithDups); // TODO
-        }
+        //    }
+        //    return new LinkedList<T>(unsortedWithDups); // TODO
+        //}
 
     }
 }

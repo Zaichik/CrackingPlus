@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdjMatrixGraph.cs" />
+    <Compile Include="DepthFirstPaths.cs" />
     <Compile Include="DepthFirstSearch.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="GraphBase.cs" />
@@ -51,6 +52,7 @@
   <ItemGroup>
     <Content Include="Txt\LargeG.txt" />
     <Content Include="Txt\MediumG.txt" />
+    <Content Include="Txt\TinyCG.txt" />
     <Content Include="Txt\TinyG.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

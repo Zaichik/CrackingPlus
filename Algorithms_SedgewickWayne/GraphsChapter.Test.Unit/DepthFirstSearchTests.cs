@@ -11,9 +11,10 @@ namespace GraphsChapter.Test.Unit
         [TestMethod]
         public void DFS()
         {
-            string filePath = @"..\..\..\Algorithms_SedgewickWayne\GraphsLib\Txt\TinyG.txt";
-            //string filePath = @"..\..\..\Algorithms_SedgewickWayne\GraphsLib\Txt\MediumG.txt";
-            //string filePath = @"..\..\..\Algorithms_SedgewickWayne\GraphsLib\Txt\LargeG.txt";
+            //string filePath = @"..\..\..\GraphsChapter\Txt\TinyG.txt";
+            string filePath = @"..\..\..\GraphsChapter\Txt\TinyCG.txt";
+            //string filePath = @"..\..\..\GraphsChapter\Txt\MediumG.txt";
+            //string filePath = @"..\..\..\GraphsChapter\Txt\LargeG.txt";
             string[] lines = System.IO.File.ReadAllLines(filePath);
             var g = new Graph(lines);
             int[] edge = Array.ConvertAll(lines[2].Split(' '), int.Parse);

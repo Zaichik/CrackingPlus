@@ -12,7 +12,7 @@ namespace GraphsChapter.Test.Unit
         [TestInitialize]
         public void Initialize()
         {
-            string filePath = @"..\..\..\Algorithms_SedgewickWayne\GraphsLib\Txt\TinyG.txt";
+            string filePath = @"..\..\..\GraphsChapter\Txt\TinyG.txt";
             string[] lines = System.IO.File.ReadAllLines(filePath);
             g = new Graph(lines);
         }

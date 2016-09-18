@@ -9,7 +9,7 @@ namespace GraphsChapter.Test.Unit
         [TestMethod]
         public void TestMethod1()
         {
-            string filePath = @"..\..\..\Algorithms_SedgewickWayne\GraphsLib\Txt\TinyG.txt";
+            string filePath = @"..\..\..\GraphsChapter\Txt\TinyG.txt";
             string[] lines = System.IO.File.ReadAllLines(filePath);
             var g = new AdjMatrixGraph(lines);
             var g2 = new AdjMatrixGraph(g);

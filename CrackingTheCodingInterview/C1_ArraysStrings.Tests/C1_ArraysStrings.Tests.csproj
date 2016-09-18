@@ -66,17 +66,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\C1_3_RemoveDupChars\C1_3_RemoveDupChars.csproj">
-      <Project>{2b7b2674-6167-4a36-898b-85be88e79da2}</Project>
+      <Project>{2B7B2674-6167-4A36-898B-85BE88E79DA2}</Project>
       <Name>C1_3_RemoveDupChars</Name>
     </ProjectReference>
     <ProjectReference Include="..\C1_ArraysStrings\C1_ArraysStrings.csproj">
       <Project>{EFBA878C-65D5-4287-AA4A-7BCCF0AD779C}</Project>
       <Name>C1_ArraysStrings</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

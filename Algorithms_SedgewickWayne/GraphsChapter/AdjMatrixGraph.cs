@@ -1,25 +1,25 @@
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Text;
 
-namespace GraphsLib
+namespace GraphsChapter
 {
-    public class GraphBase
+    public class AdjMatrixGraph
     {
-        public GraphBase(int v)
+        public int V { get; }
+        public int E { get; private set; }
+        public bool[,] Adj { get; }
+
+        public AdjMatrixGraph(int v)
         {
             if (V < 0) throw new ArgumentOutOfRangeException(nameof(v), "Number of vertices must be nonnegative");
             V = v;
-            Adj = new List<int>[V];
-            for (int i = 0; i < V; i++)
-            {
-                Adj[i] = new List<int>();
-            }
+            Adj = new bool[V, V];
         }
 
-        public GraphBase(string[] input):this(int.Parse(input[0]))
+        public AdjMatrixGraph(string[] input):this(int.Parse(input[0]))
         {
             if (input.Length < 3) throw new ArgumentException("Where are the edges??");
+
             int edgeCount = int.Parse(input[1]);
             for (int i = 2; i < edgeCount; i++)
             {
@@ -29,43 +29,42 @@ namespace GraphsLib
         }
 
         /// <summary> Deep copy </summary>
-        public GraphBase(Graph g):this(g.V)
+        public AdjMatrixGraph(AdjMatrixGraph g) :this(g.V)
         {
             E = g.E;
             for (int v = 0; v < g.V; v++)
-            {
-                Stack<int> reverse = new Stack<int>();
-                foreach (int w in g.Adj[v])
-                {
-                    Adj[v].Add(w);
-                }
-            }
+                for (int w = 0; w < g.E; w++)
+                    Adj[v,w] = g.Adj[v,w];
         }
-
-        public int V { get;}
-        public int E { get; set; }
-        public List<int>[] Adj { get; set; }
 
         private void validateVertex(int v)
         {
             if (v < 0 || v >= V)
-                throw new ArgumentOutOfRangeException(nameof(v), $"Not between 0 & {V-1}");
+                throw new ArgumentOutOfRangeException(nameof(v), $"Not between 0 & {V - 1}");
         }
 
         public void AddEdge(int v, int w)
         {
             validateVertex(v);
             validateVertex(w);
-            E++;
-            Adj[v].Add(w);
-            Adj[w].Add(v);
+            if(!Adj[v,w])
+                E++;
+
+            Adj[v,w] = true;
+            Adj[w,v] = true;
         }
 
         public int Degree(int v)
         {
             validateVertex(v);
-            return Adj[v].Count;
+            int count = 0;
+            for (int w = 0; w < V; w++)
+                if (Adj[v, w])
+                    count++;
+            return count;
         }
+
+        public bool Contains(int v, int w) =>Adj[v, w];
 
         public override string ToString()
         {
@@ -74,8 +73,9 @@ namespace GraphsLib
             for (int v = 0; v < V; v++)
             {
                 s.Append(v + ": ");
-                foreach (int w in Adj[v])
+                for (int w = 0; w < E; w++)
                 {
+                    if(Adj[v,w])
                     s.Append(w + " ");
                 }
                 s.Append("\n");

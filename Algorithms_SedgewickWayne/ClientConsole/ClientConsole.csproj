@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FundamentalsLib\FundamentalsLib.csproj">
+    <ProjectReference Include="..\FundamentalsChapter\FundamentalsChapter.csproj">
       <Project>{BD6C38A2-DFCD-40A2-8EC4-EE2013B900F2}</Project>
-      <Name>FundamentalsLib</Name>
+      <Name>FundamentalsChapter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

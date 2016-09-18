@@ -6,8 +6,8 @@
     <ProjectGuid>{98C69A84-380B-4485-9A3F-4477AF375F3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GraphsLib.Test.Unit</RootNamespace>
-    <AssemblyName>GraphsLib.Test.Unit</AssemblyName>
+    <RootNamespace>GraphsChapter.Test.Unit</RootNamespace>
+    <AssemblyName>GraphsChapter.Test.Unit</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,9 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Algorithms_SedgewickWayne\GraphsLib\GraphsLib.csproj">
+    <ProjectReference Include="..\GraphsChapter\GraphsChapter.csproj">
       <Project>{CAE45598-AB41-4B4F-BB38-BA678F24BF39}</Project>
-      <Name>GraphsLib</Name>
+      <Name>GraphsChapter</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

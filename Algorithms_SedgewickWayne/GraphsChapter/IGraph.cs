@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace GraphsLib
+namespace GraphsChapter
 {
     public interface IGraph
     {

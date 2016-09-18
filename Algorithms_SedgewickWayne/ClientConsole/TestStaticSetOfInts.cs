@@ -1,6 +1,6 @@
 ﻿using System;
 
-using FundamentalsLib;
+using FundamentalsChapter;
 
 namespace ClientConsole
 {

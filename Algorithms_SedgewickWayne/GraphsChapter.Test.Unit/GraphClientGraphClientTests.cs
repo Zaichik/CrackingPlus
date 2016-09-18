@@ -2,7 +2,7 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace GraphsLib.Test.Unit
+namespace GraphsChapter.Test.Unit
 {
     [TestClass()]
     public class GraphClientTests

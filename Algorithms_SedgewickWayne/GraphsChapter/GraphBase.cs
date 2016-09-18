@@ -1,25 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GraphsLib
+namespace GraphsChapter
 {
-    public class Graph
+    public class GraphBase
     {
-        public int V { get;}
-        public int E { get; private set; }
-        public List<int>[] Adj { get; }
-
-        public Graph(int v)
+        public GraphBase(int v)
         {
             if (V < 0) throw new ArgumentOutOfRangeException(nameof(v), "Number of vertices must be nonnegative");
             V = v;
             Adj = new List<int>[V];
             for (int i = 0; i < V; i++)
+            {
                 Adj[i] = new List<int>();
+            }
         }
 
-        public Graph(string[] input):this(int.Parse(input[0]))
+        public GraphBase(string[] input):this(int.Parse(input[0]))
         {
             if (input.Length < 3) throw new ArgumentException("Where are the edges??");
             int edgeCount = int.Parse(input[1]);
@@ -31,13 +29,22 @@ namespace GraphsLib
         }
 
         /// <summary> Deep copy </summary>
-        public Graph(Graph g):this(g.V)
+        public GraphBase(Graph g):this(g.V)
         {
             E = g.E;
             for (int v = 0; v < g.V; v++)
+            {
+                Stack<int> reverse = new Stack<int>();
                 foreach (int w in g.Adj[v])
+                {
                     Adj[v].Add(w);
+                }
+            }
         }
+
+        public int V { get;}
+        public int E { get; set; }
+        public List<int>[] Adj { get; set; }
 
         private void validateVertex(int v)
         {

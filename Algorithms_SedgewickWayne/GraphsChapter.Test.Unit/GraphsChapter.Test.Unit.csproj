@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BreadthFirstPathsTests.cs" />
     <Compile Include="DepthFirstPathsTests.cs" />
     <Compile Include="GraphClientTests.cs" />
     <Compile Include="AdjMatrixGraphTest.cs" />

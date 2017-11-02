@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTCI\MakingAnagrams.cs" />
     <Compile Include="DijkstraShortestReach2.cs" />
+    <Compile Include="HashTablesRansomNote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

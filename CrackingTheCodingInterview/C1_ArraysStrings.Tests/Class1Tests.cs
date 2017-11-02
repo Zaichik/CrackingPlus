@@ -20,7 +20,7 @@ namespace C1_3_RemoveDupChars.Tests
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             char[] charStr = str.ToCharArray();
-            Class1.RemoveDuplicateChar(charStr);
+            Task3RemoveDuplicateChar.RemoveDuplicateChar(charStr);
             stopwatch.Stop();
             Console.WriteLine(stopwatch.ElapsedMilliseconds);
             Assert.AreEqual(str, charStr.ToString());

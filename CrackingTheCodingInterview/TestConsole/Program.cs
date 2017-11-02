@@ -53,7 +53,7 @@ namespace TestConsole
             //TestStackSortAsc_3_6();
             //TestStackSortAscT_3_6();
 
-            //Class1.RemoveDuplicateChar("aabac".ToCharArray());
+            //Task3_RemoveDuplicateChar.RemoveDuplicateChar("aabac".ToCharArray());
 
 
             TestRobotRecursion_8_2();

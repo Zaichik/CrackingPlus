@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CAE45598-AB41-4B4F-BB38-BA678F24BF39}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GraphsChapter</RootNamespace>
-    <AssemblyName>GraphsChapter</AssemblyName>
+    <ProjectGuid>{F78E2E54-D450-4E21-9D76-DB8A2DB05A40}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BranchingDemo</RootNamespace>
+    <AssemblyName>BranchingDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,28 +42,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdjMatrixGraph.cs" />
-    <Compile Include="BreadthFirstPaths.cs" />
-    <Compile Include="DepthFirstPaths.cs" />
-    <Compile Include="DepthFirstSearch.cs" />
-    <Compile Include="Graph.cs" />
-    <Compile Include="GraphBase.cs" />
-    <Compile Include="GraphClient.cs" />
-    <Compile Include="IGraph.cs" />
+    <Compile Include="AccountStateDesignPatternPart2.cs" />
+    <Compile Include="AccountStateDesignPattern.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="ImmutableObjects\ImmutableObj.cs" />
+    <Compile Include="ImmutableObjects\MoneyAmount.cs" />
+    <Compile Include="IteratorDemo\EnumerableExtensions.cs" />
+    <Compile Include="IteratorDemo\FindPainter.cs" />
+    <Compile Include="IteratorDemo\IPainter.cs" />
+    <Compile Include="NotVerified.cs" />
+    <Compile Include="Closed.cs" />
+    <Compile Include="Frozen.cs" />
+    <Compile Include="Active.cs" />
+    <Compile Include="IAccountState.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialCaseDemo\Claim.cs" />
+    <Compile Include="SpecialCaseDemo\IWarranty.cs" />
+    <Compile Include="SpecialCaseDemo\SoldArticle.cs" />
+    <Compile Include="SpecialCaseDemo\LifetimeWarranty.cs" />
+    <Compile Include="SpecialCaseDemo\VoidWarranty.cs" />
+    <Compile Include="SpecialCaseDemo\TimeLimitedWarranty.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Txt\LargeG.txt" />
-    <Content Include="Txt\MediumG.txt" />
-    <Content Include="Txt\TinyCG.txt" />
-    <Content Include="Txt\TinyG.txt" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

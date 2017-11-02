@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CAE45598-AB41-4B4F-BB38-BA678F24BF39}</ProjectGuid>
+    <ProjectGuid>{14D81732-1F1E-4026-B1C1-7A845ED66930}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GraphsChapter</RootNamespace>
-    <AssemblyName>GraphsChapter</AssemblyName>
+    <RootNamespace>StringsChapter</RootNamespace>
+    <AssemblyName>StringsChapter</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,21 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdjMatrixGraph.cs" />
-    <Compile Include="BreadthFirstPaths.cs" />
-    <Compile Include="DepthFirstPaths.cs" />
-    <Compile Include="DepthFirstSearch.cs" />
-    <Compile Include="Graph.cs" />
-    <Compile Include="GraphBase.cs" />
-    <Compile Include="GraphClient.cs" />
-    <Compile Include="IGraph.cs" />
+    <Compile Include="Kmp2.cs" />
+    <Compile Include="KMP.cs" />
+    <Compile Include="MyDisposable.cs" />
+    <Compile Include="RabinKarp.cs" />
+    <Compile Include="SubstringSearchBruteForce.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Txt\LargeG.txt" />
-    <Content Include="Txt\MediumG.txt" />
-    <Content Include="Txt\TinyCG.txt" />
-    <Content Include="Txt\TinyG.txt" />
+    <Compile Include="SuffixArray.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

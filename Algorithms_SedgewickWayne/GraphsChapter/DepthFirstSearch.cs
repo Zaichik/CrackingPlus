@@ -6,6 +6,7 @@ namespace GraphsChapter
     {
         private readonly bool[] _marked;
         private int _count;
+        private int[] _
 
         public int Count => _count;
 
@@ -24,8 +25,12 @@ namespace GraphsChapter
             _marked[v] = true;
             foreach(int w in g.Adj[v])
             {
-                if(!_marked[w])
-                    DFS(g, w);
+                if (!_marked[w])
+                {
+                    DFS(g, w); 
+                    
+                }
+                    
             }
         }
 
